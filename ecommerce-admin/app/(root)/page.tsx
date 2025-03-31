@@ -1,9 +1,5 @@
-import { Button } from "@/components/ui/button";
+const SetupPage = () => {
+  return <div className="p-4">This is a protected page!</div>;
+};
 
-export default function Home() {
-  return (
-    <div>
-      <Button>Hello world</Button>
-    </div>
-  );
-}
+export default SetupPage;
