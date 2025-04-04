@@ -12,7 +12,7 @@ The idea is to have a full-featured e-commerce platform with a modern and respon
 - Prisma
 - Postgres
 - Stripe
-
+- zustand
 ## Project Structure
 - app:
   - (auth)
