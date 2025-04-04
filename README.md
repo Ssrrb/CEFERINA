@@ -20,5 +20,8 @@ The idea is to have a full-featured e-commerce platform with a modern and respon
     - login
     - signup
   - (root)
+    - page.tsx
+    - hooks
+      - use-store-modal.tsx
     
 
