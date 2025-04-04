@@ -9,6 +9,7 @@ The idea is to have a full-featured e-commerce platform with a modern and respon
 - Tailwind CSS
 - Clerk
 - Shadcn UI
+- Zustand
 - Prisma
 - Postgres
 - Stripe
