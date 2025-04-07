@@ -1,13 +1,14 @@
-import {create} from "zustand";
+import { create } from "zustand";
+import * as z from "zod";
 
 interface useStoreModalInterface {
-    isOpen: boolean;
-    onOpen: () => void;
-    onClose: () => void;
-};
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+}
 
-export const useStoreModal = create<useStoreModalStore>((set) => ({
-    isOpen: false,
-    onOpen: () => set({ isOpen: true }),
-    onClose: () => set({ isOpen: false }),
+export const useStoreModal = create<useStoreModalInterface>((set) => ({
+  isOpen: false,
+  onOpen: () => set({ isOpen: true }),
+  onClose: () => set({ isOpen: false }),
 }));
