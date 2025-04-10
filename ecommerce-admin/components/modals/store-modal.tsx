@@ -11,6 +11,7 @@ import {
   FormItem,
   FormControl,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
@@ -21,9 +22,11 @@ const formSchema = z.object({
   image: z.string().min(1),
 });
 export const StoreModal = () => {
+  //Este hook maneja si el modal está abierto o cerrado
   const storeModal = useStoreModal();
 
   const form = useForm<z.infer<typeof formSchema>>({
+    //Configuración del formulario
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -31,6 +34,7 @@ export const StoreModal = () => {
       image: "",
     },
   });
+  //Esta función se ejecuta cuando se envía el formulario
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
     //TODO: Create Store
@@ -55,6 +59,7 @@ export const StoreModal = () => {
                     <FormControl>
                       <Input placeholder="Ecommerce store" {...field} />
                     </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -62,7 +67,7 @@ export const StoreModal = () => {
                 <Button variant="outline" onClick={storeModal.onClose}>
                   Cancel{" "}
                 </Button>
-                <Button>Continue</Button>
+                <Button type="submit">Continue</Button>
               </div>
             </form>
           </Form>

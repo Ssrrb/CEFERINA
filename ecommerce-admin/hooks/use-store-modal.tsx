@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import * as z from "zod";
 
 interface useStoreModalInterface {
   isOpen: boolean;
